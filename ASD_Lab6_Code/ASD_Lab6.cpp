@@ -6,7 +6,7 @@ long long factorial(long long i)
 	long long f=1;
 	while (i >= 1)
 	{
-		f = f * i;
+		f *= i;
 		i--;
 	}
 	return f;
@@ -37,5 +37,5 @@ int main()
 	b = 1;
 	m = n;
 	S = Sum(a, b, n, m);
-	cout << S << endl;
+	cout << "The sum of " << n << " members of the sequence: " << S << endl;
 }
