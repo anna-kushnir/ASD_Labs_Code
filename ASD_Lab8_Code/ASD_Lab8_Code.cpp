@@ -16,7 +16,7 @@ void output_2(float** arr2, int m1)
 {
 	for (int i = 0; i < m1; i++) {
 		for (int j = 0; j < m1; j++) {
-			cout << setw(5) << arr2[i][j];
+			printf("%10.2f",arr2[i][j]);
 		}
 		cout << endl;
 	}
@@ -34,12 +34,27 @@ void output_1(float arr1[], int n1)
 int creating_B(float arr1[], float** arr2, int m1) {
 	int n1 = 0;
 	for (int i = 0; i < m1; i++) {
-		if (arr2[i][m1 - 1 - i] < 0) {
-			arr1[n1] = arr2[i][m1 - 1 - i];
+		if (arr2[i][m1 - i - 1] < 0) {
+			arr1[n1] = arr2[i][m1 - i - 1];
 			n1++;
 		}
 	}
 	return n1;
+}
+
+void sorting(float arr1[], int n1)
+{
+	int i, j;
+	float cop;
+	for (i = 1; i < n1; i++) {
+		cop = arr1[i];
+		j = i - 1;
+		while (j >= 0 && arr1[j] > cop) {
+			arr1[j + 1] = arr1[j];
+			j--;
+		}
+		arr1[j + 1] = cop;
+	}
 }
 
 int main()
@@ -65,6 +80,9 @@ int main()
 	}
 	else {
 		cout << "The second massive:" << endl;
+		output_1(B, n);
+		sorting(B, n);
+		cout << "Sorted one-dimensional array:" << endl;
 		output_1(B, n);
 	}
 	system("pause");
