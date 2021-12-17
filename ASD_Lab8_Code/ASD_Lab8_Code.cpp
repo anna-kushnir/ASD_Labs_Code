@@ -85,6 +85,10 @@ int main()
 		cout << "Sorted one-dimensional array:" << endl;
 		output_1(B, n);
 	}
+	for (int i = 0; i < m; i++)
+		delete[] A[i];
+	delete[] A;
+	delete[] B;
 	system("pause");
 	return 0;
 }
