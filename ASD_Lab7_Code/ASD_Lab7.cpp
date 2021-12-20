@@ -2,28 +2,8 @@
 #include <iomanip>
 using namespace std;
 
-int find_52(char arr[])
-{
-	int num, u = 0;
-	bool r = 1;
-	while (r)
-	{
-		if (arr[u] == 52)
-		{
-			num = u;
-			r = 0;
-		}
-		u++;
-	}
-	return num;
-}
-
-void output(char arr[], int m)
-{
-	for (int i = 0; i < m; i++)
-		cout << setw(4) << arr[i];
-	cout << endl;
-}
+void output(char[], int);
+int find_52(char[]);
 
 int main()
 {
@@ -56,4 +36,27 @@ int main()
 		" (the " << number + 1 << " element of the third massive)" << endl;
 	system("pause");
 	return 0;
+}
+
+void output(char arr[], int m)
+{
+	for (int i = 0; i < m; i++)
+		cout << setw(4) << arr[i];
+	cout << endl;
+}
+
+int find_52(char arr[])
+{
+	int num, u = 0;
+	bool r = 1;
+	while (r)
+	{
+		if (arr[u] == 52)
+		{
+			num = u;
+			r = 0;
+		}
+		u++;
+	}
+	return num;
 }
