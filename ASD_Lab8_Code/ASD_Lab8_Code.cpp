@@ -5,8 +5,8 @@ using namespace std;
 
 void input_2(float**, int);
 void output_2(float**, int);
-void output_1(float[], int);
 int creating_B(float[], float**, int);
+void output_1(float[], int);
 void sorting(float[], int);
 
 int main()
@@ -62,15 +62,6 @@ void output_2(float** arr2, int m1)
 	}
 }
 
-void output_1(float arr1[], int n1)
-{
-	for (int i = 0; i < n1; i++) {
-		printf("%.2f", arr1[i]);
-		cout << "  ";
-	}
-	cout << endl;
-}
-
 int creating_B(float arr1[], float** arr2, int m1) {
 	int n1 = 0;
 	for (int i = 0; i < m1; i++) {
@@ -80,6 +71,15 @@ int creating_B(float arr1[], float** arr2, int m1) {
 		}
 	}
 	return n1;
+}
+
+void output_1(float arr1[], int n1)
+{
+	for (int i = 0; i < n1; i++) {
+		printf("%.2f", arr1[i]);
+		cout << "  ";
+	}
+	cout << endl;
 }
 
 void sorting(float arr1[], int n1)
