@@ -56,7 +56,7 @@ void output_2(float** arr2, int m1)
 {
 	for (int i = 0; i < m1; i++) {
 		for (int j = 0; j < m1; j++) {
-			printf("%10.2f", arr2[i][j]);
+			printf("%f10.2", arr2[i][j]);
 		}
 		cout << endl;
 	}
