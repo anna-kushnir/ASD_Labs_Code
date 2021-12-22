@@ -40,6 +40,7 @@ int main()
 		delete[] A[i];
 	}
 	delete[] A;
+	system("pause");
 }
 
 void input(float** arr, int m1, int n1)
