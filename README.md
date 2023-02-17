@@ -1,2 +1,3 @@
-## Лабораторні роботи з дисципліни "Алгоритми та структури даних 1. Основи алгоритмізації"
-Кушнір Ганна. ІП-12. Варіант 18
+## Laboratory work on the discipline "Algorithms and Data Structures 1. Basics of algorithmization".
+#### First year, first semester.
+> Kushnir Hanna. IP-12
